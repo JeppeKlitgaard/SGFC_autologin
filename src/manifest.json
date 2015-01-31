@@ -1,13 +1,15 @@
 {
     "manifest_version": 2,
     "name": "SG FirstClass Auto-Login",
-    "version": "0.0.5",
+    "short_name": "SGFC-auto",
+    "version": "0.0.6",
 
     "description": "Automatically logs into puls.sg.dk using given credentials",
 
     "author": "Jeppe Klitgaard",
 
     "options_page": "html/options.html",
+    "homepage_url": "https://github.com/dkkline/SGFC_autologin",
 
     "web_accessible_resources": ["html/options.html"],
 
