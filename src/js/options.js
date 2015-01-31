@@ -17,10 +17,10 @@ function save_options () {
     // Update status to let user know options were saved.
     var status = document.getElementById('save-button-text');
     var status_icon = document.getElementById('save-button-icon')
-    status.textContent = 'Saved';
+    status.textContent = 'Gemt';
     $("#save-button-icon").show();
     setTimeout(function() {
-        status.textContent = 'Save';
+        status.textContent = 'Gem';
         $("#save-button-icon").hide();
 
     }, 2500);
