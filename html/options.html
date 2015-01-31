@@ -1,0 +1,44 @@
+<!-- credits: https://github.com/tsheets/Chrome-Extension-Template/blob/master/html/options.html -->
+<html>
+    <head>
+        <!-- load javascript: jQuery 1.9.1 - http://jquery.com/ -->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+
+        <!-- load javascript: Bootstrap v2.3.0 - http://twitter.github.com/bootstrap/ -->
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+
+        <!-- load stylesheets: Bootstrap v2.3.0 - http://twitter.github.com/bootstrap/index.html -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"></link>
+
+        <!-- load stylesheets: internal -->
+        <link rel="stylesheet" type="text/css" href="../css/options.css"></link>
+    </head>
+    <body>
+        <div class="container">
+            <h2>SG FirstClass Auto-Login</h2>
+            <div id="config-area" class="panel panel-default">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="auto-login"> Automatically log in
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="reload-empty-page"> Automatically reload empty pages
+                    </label>
+                </div>
+                <button type="button" id="save-button" class="btn btn-success center-block"><span id="save-button-text">Save</span> <span id="save-button-icon" class="glyphicon glyphicon-ok" style="display:none"></span></button>
+            </div>
+        </div>
+        <!-- load javascript: unique html page javascript file -->
+        <script type="text/javascript" src="../js/options.js"></script>
+    </body>
+</html>
