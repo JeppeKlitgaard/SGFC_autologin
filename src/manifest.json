@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "SG FirstClass Auto-Login",
     "short_name": "SGFC-auto",
-    "version": "0.0.8",
+    "version": "0.0.9",
 
     "description": "Logger automatisk ind på Silkeborg Gymnasiums FirstClass-hjemmeside.",
 
