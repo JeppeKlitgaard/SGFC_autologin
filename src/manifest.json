@@ -1,9 +1,8 @@
 {
     "manifest_version": 2,
     "name": "SG FirstClass Auto-Login",
-    "version": "0.0.4",
+    "version": "0.0.5",
 
-    //"default_locale": "en",
     "description": "Automatically logs into puls.sg.dk using given credentials",
 
     "author": "Jeppe Klitgaard",
