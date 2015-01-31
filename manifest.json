@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "SG FirstClass Auto-Login",
-    "version": "0.0.2",
+    "version": "0.0.3",
 
     //"default_locale": "en",
     "description": "Automatically logs into puls.sg.dk using given credentials",
@@ -9,6 +9,8 @@
     "author": "Jeppe Klitgaard",
 
     "options_page": "html/options.html",
+
+    "web_accessible_resources": ["html/options.html"],
 
     "content_scripts": [
         {
@@ -20,5 +22,6 @@
     ],
 
     "permissions": ["storage",
+                    "tabs",
                     "https://puls.sg.dk/*"]
 }

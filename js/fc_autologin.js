@@ -1,19 +1,12 @@
 $(document).ready(function(){
-    /*
-    var check_empty_page = true;
-    // Sometimes Puls fails to load, for whatever reason.
-    // If that's the case, reload the page.
-    if (document.body.innerHTML.length === 0 && check_empty_page) { // Body is empty!
-        window.location.reload(true) // reload, don't look for cache.
-    } */
     // load settings
     chrome.storage.sync.get({
         username: "",
         password: "",
         auto_login: false,
-        reload_empty_page: false
+        reload_empty_page: false,
+        last_updated_ext_version: "0.0.0"
     }, function(settings) {
-
         // find out what type of page we're on.
         // login error
         if ($('#fc-login-error').length === 1) {
@@ -41,14 +34,23 @@ $(document).ready(function(){
         }
 
         if (page === "login" && settings.auto_login) {
-            var login_form = document.getElementById("loginForm");
-            var username = document.getElementById("userid");
-            var password = document.getElementById("password")
+            // If settings version does not match extension version
+            // Open a tab with options.html
+            if (chrome.runtime.getManifest().version !== settings.last_updated_ext_version) {
+                var url_str = "chrome-extension://" + chrome.runtime.id + "/html/options.html";
+                console.log(url_str);
+                window.open(url_str);
+            }
+            else {
+                var login_form = document.getElementById("loginForm");
+                var username = document.getElementById("userid");
+                var password = document.getElementById("password")
 
-            username.value = settings.username;
-            password.value = settings.password;
+                username.value = settings.username;
+                password.value = settings.password;
 
-            login_form.submit()
+                login_form.submit()
+            }
         }
 
         if (page === "other") {

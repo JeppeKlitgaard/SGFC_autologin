@@ -5,11 +5,14 @@ function save_options () {
     var auto_login = document.getElementById("auto-login").checked;
     var reload_empty_page = document.getElementById("reload-empty-page").checked;
 
+    var last_updated_ext_version = chrome.runtime.getManifest().version;
+
     chrome.storage.sync.set({
         username: username,
         password: password,
         auto_login: auto_login,
-        reload_empty_page: reload_empty_page
+        reload_empty_page: reload_empty_page,
+        last_updated_ext_version: last_updated_ext_version
     }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('save-button-text');
